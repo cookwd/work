@@ -62,9 +62,9 @@
           <span slot="action" slot-scope="text, record">
 <!--添加用户按钮-->  
             <a @click="handleOpen(record)">用户</a>         
-            <a-button type="primary" @click="queryRole(record)">
+            <a @click="queryRole(record)">
                 角色
-            </a-button>
+            </a>
             <a-modal
                     title="角色信息"
                     :visible="visible"
