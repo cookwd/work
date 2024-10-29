@@ -32,14 +32,14 @@
         <a-input v-model="model.password2" size="large" type="password" autocomplete="false" placeholder="确认密码"></a-input>
       </a-form-model-item>
 
-      <a-form-model-item prop="mobile">
+      <!-- <a-form-model-item prop="mobile">
         <a-input v-model="model.mobile" size="large" placeholder="11 位手机号">
           <a-select slot="addonBefore" size="large" defaultValue="+86">
             <a-select-option value="+86">+86</a-select-option>
             <a-select-option value="+87">+87</a-select-option>
           </a-select>
         </a-input>
-      </a-form-model-item>
+      </a-form-model-item> -->
       <!--<a-input-group size="large" compact>
             <a-select style="width: 20%" size="large" defaultValue="+86">
               <a-select-option value="+86">+86</a-select-option>
@@ -129,11 +129,11 @@
           ],
           mobile: [
             { required: false },
-            { validator: this.handlePhoneCheck }
+            // { validator: this.handlePhoneCheck }
           ],
           captcha: [
             { required: false },
-            { validator: this.handleCaptchaCheck }
+            // { validator: this.handleCaptchaCheck }
           ]
         },
         state: {
@@ -271,8 +271,9 @@
             let register = {
               username: values.username,
               password: values.password,
-              phone: values.mobile,
+              // phone: values.mobile,
               // smscode: values.captcha
+              phone: "18812341888",
               smscode: "111111"
             };
             postAction("/sys/user/register", register).then((res) => {
