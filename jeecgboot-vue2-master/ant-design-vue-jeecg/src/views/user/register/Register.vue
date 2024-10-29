@@ -32,14 +32,22 @@
         <a-input v-model="model.password2" size="large" type="password" autocomplete="false" placeholder="确认密码"></a-input>
       </a-form-model-item>
 
+<<<<<<< HEAD
       <!-- <a-form-model-item prop="mobile">
+=======
+      <a-form-model-item prop="mobile">
+>>>>>>> origin/master
         <a-input v-model="model.mobile" size="large" placeholder="11 位手机号">
           <a-select slot="addonBefore" size="large" defaultValue="+86">
             <a-select-option value="+86">+86</a-select-option>
             <a-select-option value="+87">+87</a-select-option>
           </a-select>
         </a-input>
+<<<<<<< HEAD
       </a-form-model-item> -->
+=======
+      </a-form-model-item>
+>>>>>>> origin/master
       <!--<a-input-group size="large" compact>
             <a-select style="width: 20%" size="large" defaultValue="+86">
               <a-select-option value="+86">+86</a-select-option>
@@ -48,7 +56,11 @@
             <a-input style="width: 80%" size="large" placeholder="11 位手机号"></a-input>
           </a-input-group>-->
 
+<<<<<<< HEAD
       <!-- <a-row :gutter="16">
+=======
+      <a-row :gutter="16">
+>>>>>>> origin/master
         <a-col class="gutter-row" :span="16">
           <a-form-model-item prop="captcha">
             <a-input v-model="model.captcha" size="large" type="text" placeholder="验证码">
@@ -64,7 +76,11 @@
             @click.stop.prevent="getCaptcha"
             v-text="!state.smsSendBtn && '获取验证码'||(state.time+' s')"></a-button>
         </a-col>
+<<<<<<< HEAD
       </a-row> -->
+=======
+      </a-row>
+>>>>>>> origin/master
 
       <a-form-model-item>
         <a-button
@@ -121,7 +137,11 @@
           ],
           password: [
             { required: false},
+<<<<<<< HEAD
             // { validator: this.handlePasswordLevel }
+=======
+            { validator: this.handlePasswordLevel }
+>>>>>>> origin/master
           ],
           password2: [
             { required: false },
@@ -129,11 +149,19 @@
           ],
           mobile: [
             { required: false },
+<<<<<<< HEAD
             // { validator: this.handlePhoneCheck }
           ],
           captcha: [
             { required: false },
             // { validator: this.handleCaptchaCheck }
+=======
+            { validator: this.handlePhoneCheck }
+          ],
+          captcha: [
+            { required: false },
+            { validator: this.handleCaptchaCheck }
+>>>>>>> origin/master
           ]
         },
         state: {
@@ -271,10 +299,15 @@
             let register = {
               username: values.username,
               password: values.password,
+<<<<<<< HEAD
               // phone: values.mobile,
               // smscode: values.captcha
               phone: "18812341888",
               smscode: "111111"
+=======
+              phone: values.mobile,
+              smscode: values.captcha
+>>>>>>> origin/master
             };
             postAction("/sys/user/register", register).then((res) => {
               if (!res.success) {
