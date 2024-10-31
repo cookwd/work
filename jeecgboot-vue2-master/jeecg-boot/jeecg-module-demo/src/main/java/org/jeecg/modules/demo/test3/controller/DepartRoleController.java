@@ -35,12 +35,6 @@ import com.alibaba.fastjson.JSON;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 
- /**
- * @Description: 部门角色管理
- * @Author: jeecg-boot
- * @Date:   2024-10-30
- * @Version: V1.0
- */
 @Slf4j
 @Api(tags="部门角色管理")
 @RestController

@@ -25,7 +25,7 @@
               <div class="ant-alert ant-alert-info" style="margin-bottom: 16px;">
                 <i class="anticon anticon-info-circle ant-alert-icon"></i> 已选择 <a style="font-weight: 600">{{
                 selectedRowKeys2.length }}</a>项
-                <a style="margin-left: 24px" @click="onClearSelected2">清空</a>
+                <a style="margin-left: 24px" @click="onClearSelected">清空</a>
               </div>
               <a-table
                 style="height:500px"
@@ -33,11 +33,11 @@
                 bordered
                 size="middle"
                 rowKey="id"
-                :columns="columns2"
-                :dataSource="dataSource2"
-                :pagination="ipagination2"
+                :columns="columns"
+                :dataSource="dataSource"
+                :pagination="ipagination"
                 :loading="loading2"
-                :rowSelection="{selectedRowKeys: selectedRowKeys2, onChange: onSelectChange2}"
+                :rowSelection="{selectedRowKeys: selectedRowKeys, onChange: onSelectChange}"
                 @change="handleTableChange2">
                 <span slot="action" slot-scope="text, record">
                   <a @click="handleEdit2(record)">编辑</a>
@@ -66,25 +66,8 @@
   <script>
 
     import {queryDepartRole} from '@/api/api'
-    // 表头
-    // const columns = [
-    //   {
-    //     title: '角色名称',
-    //     dataIndex: 'roleName'
-    //   },
-    //   {
-    //     title: '角色编码',
-    //     dataIndex: 'roleCode',
-    //   },
-    //   {
-    //     title: '创建人',
-    //     dataIndex: 'createBy'
-    //   },
-    //   {
-    //     title: '创建时间',
-    //     dataIndex: 'createTime'
-    //   }
-    // ]
+
+    
     export default {
       name: 'DapartRoleList',
 

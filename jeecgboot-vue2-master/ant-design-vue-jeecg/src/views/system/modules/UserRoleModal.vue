@@ -139,7 +139,7 @@
         let that = this;
         let params =  {
           roleId:that.roleId,
-          permissionIds:that.checkedKeys.join(","),
+          permissionIds:that.checkedKeys.join(","), 
           lastpermissionIds:that.defaultCheckedKeys.join(","),
         };
         that.loading = true;
